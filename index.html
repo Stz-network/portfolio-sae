@@ -222,13 +222,13 @@
         <p class="desc">Chaîne d'acquisition et de centralisation automatique de métriques de température et de puissance de signal (RSSI).</p>
         
         <div class="arch-line">
-            DS18B20 (OneWire) ➔ Feather M0 (LoRa) ➔ UART ➔ ESP32 (Wi-Fi) ➔ HTTP GET ➔ Raspberry Pi (PostgreSQL)[cite: 58]
+            DS18B20 (OneWire) ➔ Feather M0 (LoRa) ➔ UART ➔ ESP32 (Wi-Fi) ➔ HTTP GET ➔ Raspberry Pi (PostgreSQL)
         </div>
 
         <ul class="points">
-            <li><strong>Provisioning Headless Linux :</strong> Déploiement automatique au boot sur Raspberry Pi via Cloud-init (<code>user-data</code> / <code>network-config</code>)[cite: 58], IP fixe <code>192.168.1.104/24</code>, SSH et bus SPI/I2C/1-Wire.</li>
-            <li><strong>Backend &amp; SGBD :</strong> Stack Apache2 / PostgreSQL et script d'ingestion PHP (<code>measures.php</code>)[cite: 58].</li>
-            <li><strong>Câblage série UART :</strong> Interconnexion croisée (TX/RX/GND) entre Feather M0 et ESP32 validée sur breadboard[cite: 58].</li>
+            <li><strong>Provisioning Headless Linux :</strong> Déploiement automatique au boot sur Raspberry Pi via Cloud-init (<code>user-data</code> / <code>network-config</code>) IP fixe <code>192.168.1.104/24</code>, SSH et bus SPI/I2C/1-Wire.</li>
+            <li><strong>Backend &amp; SGBD :</strong> Stack Apache2 / PostgreSQL et script d'ingestion PHP (<code>measures.php</code>).</li>
+            <li><strong>Câblage série UART :</strong> Interconnexion croisée (TX/RX/GND) entre Feather M0 et ESP32 validée sur breadboard.</li>
         </ul>
 
         <div class="figures-grid">
@@ -261,10 +261,10 @@
         <p class="desc">Audit d'infrastructure virtuelle KVM, qualification de débit utile, métrologie vidéo adaptative et configuration d'un NAS OpenMediaVault.</p>
 
         <ul class="points">
-            <li><strong>Audit KVM :</strong> Audit CLI (<code>lscpu</code>, <code>free -m</code>) sur VM Linux sous hyperviseur KVM (4 vCPUs, 4 Go RAM)[cite: 68].</li>
-            <li><strong>Qualification iPerf3 :</strong> Mesure du débit TCP utile à <strong>937 Mbit/s</strong> sans perte de paquet (<code>Retr = 0</code>)[cite: 67].</li>
-            <li><strong>Streaming adaptatif DASH :</strong> Analyse DevTools Firefox (Shaka Player) : repli dynamique de 720p vers 480p suite à un pic de latence réseau[cite: 69].</li>
-            <li><strong>Architecture Dual-NIC OMV :</strong> Isolement du trafic SMB sur VirtualBox via <code>enp0s3</code> (NAT <code>10.0.2.15/24</code>) et <code>enp0s8</code> (Host-Only <code>192.168.56.101/24</code>)[cite: 68].</li>
+            <li><strong>Audit KVM :</strong> Audit CLI (<code>lscpu</code>, <code>free -m</code>) sur VM Linux sous hyperviseur KVM (4 vCPUs, 4 Go RAM).</li>
+            <li><strong>Qualification iPerf3 :</strong> Mesure du débit TCP utile à <strong>937 Mbit/s</strong> sans perte de paquet (<code>Retr = 0</code>).</li>
+            <li><strong>Streaming adaptatif DASH :</strong> Analyse DevTools Firefox (Shaka Player) : repli dynamique de 720p vers 480p suite à un pic de latence réseau.</li>
+            <li><strong>Architecture Dual-NIC OMV :</strong> Isolement du trafic SMB sur VirtualBox via <code>enp0s3</code> (NAT <code>10.0.2.15/24</code>) et <code>enp0s8</code> (Host-Only <code>192.168.56.101/24</code>).</li>
         </ul>
 
         <div class="figures-grid">
@@ -313,9 +313,9 @@
         <p class="desc">Recensement, gestion et cartographie interactive de la promotion BUT R&amp;T.</p>
 
         <ul class="points">
-            <li><strong>Modélisation BDD :</strong> Conception du MCD sous Draw.io et décliné en MLD relationnel[cite: 75].</li>
-            <li><strong>Cartographie &amp; Recherche :</strong> Moteur temps réel avec autocomplétion, surlignage et carte interactive Leaflet.js[cite: 40, 62].</li>
-            <li><strong>Parsing &amp; APIs :</strong> Croisement <code>etudiants.json</code> / <code>villes.csv</code> et intégration des données géographiques[cite: 40, 62].</li>
+            <li><strong>Modélisation BDD :</strong> Conception du MCD sous Draw.io et décliné en MLD relationnel.</li>
+            <li><strong>Cartographie &amp; Recherche :</strong> Moteur temps réel avec autocomplétion, surlignage et carte interactive Leaflet.js.</li>
+            <li><strong>Parsing &amp; APIs :</strong> Croisement <code>etudiants.json</code> / <code>villes.csv</code> et intégration des données géographiques.</li>
         </ul>
 
         <div class="figures-grid">
@@ -339,8 +339,8 @@
         <p class="desc">Analyse fréquentielle, filtrage numérique et qualification de la voix sur IP.</p>
 
         <ul class="points">
-            <li><strong>Théorie du signal :</strong> Démonstration expérimentale de Shannon-Nyquist sur les signaux audio. Filtre passe-bas à 22,46 kHz (-140,91 dB)[cite: 73].</li>
-            <li><strong>Métrologie :</strong> Latence ~600 ms[cite: 14, 30], SNR 113 dB[cite: 14, 24] et pas de quantification Q ≈ 30 µV[cite: 14, 31].</li>
+            <li><strong>Théorie du signal :</strong> Démonstration expérimentale de Shannon-Nyquist sur les signaux audio. Filtre passe-bas à 22,46 kHz (-140,91 dB)].</li>
+            <li><strong>Métrologie :</strong> Latence ~600 ms[cite: 14, 30], SNR 113 dB[cite: 14, 24] et pas de quantification Q ≈ 30 µV.</li>
         </ul>
     </div>
 
