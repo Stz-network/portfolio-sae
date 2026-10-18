@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio SAÉ — Bilal Bouhout</title>
+    <style>
+        :root {
+            --dark: #111827;          /* Noir/Anthracite principal */
+            --gray-dark: #374151;     /* Gris foncé sous-titres */
+            --gray-muted: #6b7280;    /* Gris neutre détails */
+            --bg-page: #f8fafc;       /* Fond clair papier */
+            --bg-card: #ffffff;       /* Blanc pur */
+            --border: #e5e7eb;        /* Bordures fines */
+            --code-bg: #f3f4f6;       /* Fond blocs d'architecture */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--dark);
+            line-height: 1.5;
+            padding: 2.5rem 1rem;
+        }
+
+        .document-container {
+            max-width: 860px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 3rem 2.5rem;
+        }
+
+        /* Header Document */
+        header {
+            border-bottom: 2px solid var(--dark);
+            padding-bottom: 1.25rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-main h1 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-main p {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            margin-top: 0.25rem;
+        }
+
+        .header-meta {
+            font-size: 0.85rem;
+            color: var(--gray-muted);
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--dark);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            color: var(--dark);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--code-bg);
+            color: var(--dark);
+            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .desc {
+            font-size: 0.92rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Arch Line */
+        .arch-line {
+            background-color: var(--code-bg);
+            border-left: 3px solid var(--dark);
+            padding: 0.5rem 0.8rem;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 0.82rem;
+            color: var(--dark);
+            margin: 0.75rem 0 1rem 0;
+            border-radius: 0 3px 3px 0;
+            overflow-x: auto;
+        }
+
+        ul.points {
+            list-style-type: square;
+            margin-left: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--gray-dark);
+        }
+
+        ul.points li {
+            margin-bottom: 0.4rem;
+        }
+
+        ul.points li strong {
+            color: var(--dark);
+        }
+
+        /* Figures Grid */
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .figure-card {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .figure-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: contain;
+            background-color: #f9fafb;
+            display: block;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .figure-caption {
+            padding: 0.4rem 0.6rem;
+            font-size: 0.78rem;
+            color: var(--gray-muted);
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gray-muted);
+        }
+
+        @media (max-width: 640px) {
+            .document-container { padding: 1.5rem 1rem; }
+            .header-meta { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="document-container">
+
+    <!-- Header Style Rapport Technique -->
+    <header>
+        <div class="header-main">
+            <h1>Bilal Bouhout</h1>
+            <p>Portfolio de Projets SAÉ — Réseaux &amp; Télécommunications</p>
+        </div>
+        <div class="header-meta">
+            <p><strong>Université Marie &amp; Louis Pasteur</strong></p>
+            <p>IUT de Montbéliard</p>
+            <p>BUT R&amp;T — 2026</p>
+        </div>
+    </header>
+
+    <!-- SAÉ 24 -->
+    <div class="section">
+        <div class="section-header">
+            <h2 class="section-title">SAÉ 2.04 — Passerelle IoT Multi-Protocole</h2>
+            <div class="tags">
+                <span class="tag">LoRa</span>
+                <span class="tag">Wi-Fi</span>
+                <span class="tag">Cloud-init</span>
+                <span class="tag">PostgreSQL</span>
+            </div>
+        </div>
+        <p class="desc">Chaîne d'acquisition et de centralisation automatique de métriques de température et de puissance de signal (RSSI).</p>
+        
+        <div class="arch-line">
+            DS18B20 (OneWire) ➔ Feather M0 (LoRa)[cite: 58] ➔ UART ➔ ESP32 (Wi-Fi)[cite: 58] ➔ HTTP GET ➔ Raspberry Pi (PostgreSQL)[cite: 58]
+        </div>
+
+        <ul class="points">
+            <li><strong>Provisioning Headless Linux :</strong> Déploiement automatique au boot sur Raspberry Pi via Cloud-init (<code>user-data</code> / <code>network-config</code>)[cite: 58], IP fixe <code>192.168.1.104/24</code>, SSH et bus SPI/I2C/1-Wire.</li>
+            <li><strong>Backend &amp; SGBD :</strong> Stack Apache2 / PostgreSQL et script d'ingestion PHP (<code>measures.php</code>)[cite: 58].</li>
+            <li><strong>Câblage série UART :</strong> Interconnexion croisée (TX/RX/GND) entre Feather M0 et ESP32 validée sur breadboard[cite: 58].</li>
+        </ul>
+
+        <div class="figures-grid">
+            <div class="figure-card">
+                <img src="image_ca6e8a.png" alt="Schéma chaîne IoT">
+                <div class="figure-caption">Figure 1 : Schéma synoptique de la chaîne IoT</div>
+            </div>
+            <div class="figure-card">
+                <img src="image_ca7285.jpg" alt="Schéma UART">
+                <div class="figure-caption">Figure 2 : Schéma de câblage UART croisé</div>
+            </div>
+            <div class="figure-card">
+                <img src="image_ca72a7.jpg" alt="Montage breadboard">
+                <div class="figure-caption">Figure 3 : Montage physique sur breadboard</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAÉ 301 -->
+    <div class="section">
+        <div class="section-header">
+            <h2 class="section-title">SAÉ 3.01 — Virtualisation, Performance Network &amp; NAS OMV</h2>
+            <div class="tags">
+                <span class="tag">KVM</span>
+                <span class="tag">iPerf3</span>
+                <span class="tag">DASH / ABR</span>
+                <span class="tag">OpenMediaVault</span>
+            </div>
+        </div>
+        <p class="desc">Audit d'infrastructure virtuelle KVM, qualification de débit utile, métrologie vidéo adaptative et configuration d'un NAS OpenMediaVault.</p>
+
+        <ul class="points">
+            <li><strong>Audit KVM :</strong> Audit CLI (<code>lscpu</code>, <code>free -m</code>) sur VM Linux sous hyperviseur KVM (4 vCPUs, 4 Go RAM)[cite: 68].</li>
+            <li><strong>Qualification iPerf3 :</strong> Mesure du débit TCP utile à <strong>937 Mbit/s</strong> sans perte de paquet (<code>Retr = 0</code>)[cite: 67].</li>
+            <li><strong>Streaming adaptatif DASH :</strong> Analyse DevTools Firefox (Shaka Player) : repli dynamique de 720p vers 480p suite à un pic de latence réseau[cite: 69].</li>
+            <li><strong>Architecture Dual-NIC OMV :</strong> Isolement du trafic SMB sur VirtualBox via <code>enp0s3</code> (NAT <code>10.0.2.15/24</code>) et <code>enp0s8</code> (Host-Only <code>192.168.56.101/24</code>)[cite: 68].</li>
+        </ul>
+
+        <div class="figures-grid">
+            <div class="figure-card">
+                <img src="image_ca762a.png" alt="Audit lscpu">
+                <div class="figure-caption">Figure 4 : Diagnostic processeur lscpu</div>
+            </div>
+            <div class="figure-card">
+                <img src="image_ca7680.png" alt="Mémoire free -m">
+                <div class="figure-caption">Figure 5 : Allocation mémoire free -m</div>
+            </div>
+            <div class="figure-card">
+                <img src="image_ca76bd.png" alt="Test iPerf3">
+                <div class="figure-caption">Figure 6 : Mesure de débit TCP iPerf3</div>
+            </div>
+            <div class="figure-card">
+                <img src="241f7e64-5525-4f17-8369-673f8bbe77ba.jpg" alt="DevTools DASH">
+                <div class="figure-caption">Figure 7 : Analyse de repli ABR sous Firefox</div>
+            </div>
+            <div class="figure-card">
+                <img src="112a22f1-83c8-4fb3-b456-814e51509944.png" alt="Commandes ip a">
+                <div class="figure-caption">Figure 8 : Interfaces réseau Dual-NIC</div>
+            </div>
+            <div class="figure-card">
+                <img src="3ae93710-bc1a-4f02-8a39-65d225649e29.png" alt="Interface OMV">
+                <div class="figure-caption">Figure 9 : Administration OpenMediaVault</div>
+            </div>
+            <div class="figure-card">
+                <img src="bfe2bd9c-27ad-4b13-8b47-71a6318e6766.png" alt="Partage SMB">
+                <div class="figure-caption">Figure 10 : Partage SMB sous Windows</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAÉ 23 -->
+    <div class="section">
+        <div class="section-header">
+            <h2 class="section-title">SAÉ 23 — Application Web Domicilomètre</h2>
+            <div class="tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">Leaflet.js</span>
+                <span class="tag">MySQL</span>
+            </div>
+        </div>
+        <p class="desc">Recensement, gestion et cartographie interactive de la promotion BUT R&amp;T.</p>
+
+        <ul class="points">
+            <li><strong>Modélisation BDD :</strong> Conception du MCD sous Draw.io et décliné en MLD relationnel[cite: 75].</li>
+            <li><strong>Cartographie &amp; Recherche :</strong> Moteur temps réel avec autocomplétion, surlignage et carte interactive Leaflet.js[cite: 40, 62].</li>
+            <li><strong>Parsing &amp; APIs :</strong> Croisement <code>etudiants.json</code> / <code>villes.csv</code> et intégration des données géographiques[cite: 40, 62].</li>
+        </ul>
+
+        <div class="figures-grid">
+            <div class="figure-card">
+                <img src="5eda1385-f5eb-4fb0-9a52-01073decb9b9.png" alt="MCD Domicilomètre">
+                <div class="figure-caption">Figure 11 : Modèle Conceptuel de Données (MCD)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAÉ 202/22 -->
+    <div class="section">
+        <div class="section-header">
+            <h2 class="section-title">SAÉ 202 / 22 — VoIP &amp; Traitement du Signal</h2>
+            <div class="tags">
+                <span class="tag">Shannon-Nyquist</span>
+                <span class="tag">Wireshark</span>
+                <span class="tag">Codecs VoIP</span>
+            </div>
+        </div>
+        <p class="desc">Analyse fréquentielle, filtrage numérique et qualification de la voix sur IP.</p>
+
+        <ul class="points">
+            <li><strong>Théorie du signal :</strong> Démonstration expérimentale de Shannon-Nyquist sur les signaux audio. Filtre passe-bas à 22,46 kHz (-140,91 dB)[cite: 73].</li>
+            <li><strong>Métrologie :</strong> Latence ~600 ms[cite: 14, 30], SNR 113 dB[cite: 14, 24] et pas de quantification Q ≈ 30 µV[cite: 14, 31].</li>
+        </ul>
+    </div>
+
+    <footer>
+        Bilal Bouhout — Dossier de preuve technique SAÉ | BUT Réseaux &amp; Télécommunications
+    </footer>
+
+</div>
+
+</body></html>
